@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Zapfino.ttf">
+            <string>Zapfino</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Silly_Song" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generate a Silly Song!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHj-sp-PRK">
+                                <rect key="frame" x="71.5" y="53" width="232" height="29"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Silly Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtH-gd-kVQ">
+                                <rect key="frame" x="43" y="158" width="289" height="151"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="44"/>
+                                <color key="textColor" red="0.40357142857142858" green="0.082142857142857142" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SZ4-aC-GSD">
+                                <rect key="frame" x="94" y="317" width="187" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="displayLyrics:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="JrO-Cc-Rfq"/>
+                                    <action selector="resetLyrics:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="ToF-f1-g68"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The lyrics will diplay right here!!!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sSd-6u-2F3">
+                                <rect key="frame" x="50" y="434" width="274" height="163"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.5892857142857143" blue="0.89701457377875193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NtH-gd-kVQ" secondAttribute="trailing" constant="60" id="3QX-je-olc"/>
+                            <constraint firstItem="SZ4-aC-GSD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4PL-0E-guc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sSd-6u-2F3" secondAttribute="bottom" constant="70" id="Akg-rC-uJh"/>
+                            <constraint firstItem="NtH-gd-kVQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="Glu-3s-8se"/>
+                            <constraint firstItem="sSd-6u-2F3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hvc-dN-Bf3"/>
+                            <constraint firstItem="sSd-6u-2F3" firstAttribute="centerX" secondItem="SZ4-aC-GSD" secondAttribute="centerX" id="Hw8-3W-16x"/>
+                            <constraint firstItem="UHj-sp-PRK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SXr-0W-eRG"/>
+                            <constraint firstItem="SZ4-aC-GSD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="a77-ap-cpr"/>
+                            <constraint firstItem="sSd-6u-2F3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ciQ-hc-pQ4"/>
+                            <constraint firstItem="sSd-6u-2F3" firstAttribute="top" secondItem="SZ4-aC-GSD" secondAttribute="bottom" constant="50" id="eSI-3E-VgJ"/>
+                            <constraint firstItem="UHj-sp-PRK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="g5P-Qc-YFG"/>
+                            <constraint firstItem="SZ4-aC-GSD" firstAttribute="top" secondItem="NtH-gd-kVQ" secondAttribute="bottom" constant="58" id="jQs-6X-EbJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SZ4-aC-GSD" secondAttribute="trailing" constant="102" id="khy-8I-rL9"/>
+                            <constraint firstItem="NtH-gd-kVQ" firstAttribute="top" secondItem="UHj-sp-PRK" secondAttribute="bottom" constant="65" id="n8c-2F-xux"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sSd-6u-2F3" secondAttribute="trailing" constant="51" id="wUd-Yj-e4F"/>
+                            <constraint firstItem="NtH-gd-kVQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ziQ-lT-2lw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lyricsView" destination="sSd-6u-2F3" id="Qrp-ux-ekT"/>
+                        <outlet property="nameField" destination="SZ4-aC-GSD" id="UZG-Ys-JOw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
